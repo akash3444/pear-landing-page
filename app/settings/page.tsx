@@ -1,7 +1,8 @@
-import { redirect } from "next/navigation";
-import { createClient } from "@/utils/supabase/server";
+import UpdatePasswordButton from "@/components/auth/update-password-button";
 import { Button } from "@/components/ui/button";
+import { createClient } from "@/utils/supabase/server";
 import Link from "next/link";
+import { redirect } from "next/navigation";
 
 export default async function Settings() {
   const supabase = createClient();
@@ -44,6 +45,7 @@ export default async function Settings() {
                     </tr>
                   </tbody>
                 </table>
+                <UpdatePasswordButton />
               </div>
             </div>
 

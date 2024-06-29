@@ -74,6 +74,9 @@ export async function signinWithGoogle() {
 export async function resetPassword(formData: FormData) {
   const { data, error } = await supabase.auth.resetPasswordForEmail(
     formData.get("email") as string,
+    {
+      redirectTo: `${process.env.NEXT_PUBLIC_REDIRECT_URL}/update-password`,
+    },
   );
 
   if (error) {
