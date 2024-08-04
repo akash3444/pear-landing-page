@@ -2,9 +2,14 @@ import { DiscordLogo } from "@/components/ui/icons";
 import {
   BugIcon,
   CogIcon,
+  CrownIcon,
   ExternalLinkIcon,
   GitForkIcon,
+  GitPullRequestCreateArrowIcon,
   SearchCodeIcon,
+  ShieldCheckIcon,
+  UserIcon,
+  WrenchIcon,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -194,26 +199,109 @@ const ContributionPage = () => {
 
       <div>
         <h2 className="mb-3 text-3xl font-semibold">Contributing Roles</h2>
-        <ul className="list-disc pl-5 text-gray-700">
-          <li className="leading-relaxed">
-            <b className="text-white-main">User:</b> Anyone
-          </li>
-          <li className="leading-relaxed">
-            <b className="text-white-main">Contributor:</b> &gt;1 commits to
-            codebase, can create PR&apos;s
-          </li>
-          <li className="leading-relaxed">
-            <b className="text-white-main">Moderator:</b> Application based
-            (apply here!), can approve PR&apos;s, cannot merge yet
-          </li>
-          <li className="leading-relaxed">
-            <b className="text-white-main">Maintainer:</b> Approval-based from
-            Admins / has been a moderator for a while, read/write access to main
-          </li>
-          <li className="leading-relaxed">
-            <b className="text-white-main">Admin:</b> Pan and Nang
-          </li>
-        </ul>
+        <table className="border-separate border-spacing-0">
+          <thead className="bg-white-main/5">
+            <tr>
+              <th className="w-36 rounded-tl-sm border border-gray-400 p-2 pl-3 text-left">
+                Role
+              </th>
+              <th className="rounded-tr-sm border border-gray-400 p-2 pl-3 text-left">
+                Description
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td className="border border-t-0 border-gray-400 p-2">
+                <b className="font-semibold text-white-main">
+                  <UserIcon className="mr-1 inline w-5" /> User
+                </b>
+              </td>
+              <td className="border border-t-0 border-gray-400 p-2">
+                <ul className="list-disc pl-6 text-gray-700">
+                  <li>Anyone</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td className="border border-t-0 border-gray-400 p-2">
+                <b className="font-semibold text-white-main">
+                  <GitPullRequestCreateArrowIcon className="mr-1 inline w-5" />{" "}
+                  Contributor
+                </b>
+              </td>
+              <td className="border border-t-0 border-gray-400 p-2">
+                <ul className="list-disc pl-6 text-gray-700">
+                  <li>
+                    <b className="font-semibold text-gray-800">Criteria: </b>{" "}
+                    &gt;1 commits to codebase
+                  </li>
+                  <li>
+                    <b className="font-semibold text-gray-800">
+                      Capabilities:{" "}
+                    </b>
+                    Can create PR&apos;s
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td className="border border-t-0 border-gray-400 p-2">
+                <b className="font-semibold text-white-main">
+                  <ShieldCheckIcon className="mr-1 inline w-5" /> Moderator
+                </b>
+              </td>
+              <td className="border border-t-0 border-gray-400 p-2">
+                <ul className="list-disc pl-6 text-gray-700">
+                  <li>
+                    <b className="font-semibold text-gray-800">Criteria: </b>{" "}
+                    Application based (apply here!)
+                  </li>
+                  <li>
+                    <b className="font-semibold text-gray-800">
+                      Capabilities:{" "}
+                    </b>
+                    Can approve PR&apos;s, cannot merge yet
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td className="border border-t-0 border-gray-400 p-2">
+                <b className="font-semibold text-white-main">
+                  <WrenchIcon className="mr-1 inline w-5" /> Maintainer
+                </b>
+              </td>
+              <td className="border border-t-0 border-gray-400 p-2">
+                <ul className="list-disc pl-6 text-gray-700">
+                  <li>
+                    <b className="font-semibold text-gray-800">Criteria: </b>{" "}
+                    Approval-based from Admins / has been a moderator for a
+                    while
+                  </li>
+                  <li>
+                    <b className="font-semibold text-gray-800">
+                      Capabilities:{" "}
+                    </b>
+                    Read/write access to main
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td className="rounded-bl-sm border border-t-0 border-gray-400 p-2">
+                <b className="font-semibold text-white-main">
+                  <CrownIcon className="mr-1 inline w-5" /> Admin
+                </b>
+              </td>
+              <td className="rounded-br-sm border border-t-0 border-gray-400 p-2">
+                <ul className="list-disc pl-6 text-gray-700">
+                  <li>Pan and Nang</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
 
       {/* How can I get started contributing? */}
