@@ -1,5 +1,6 @@
 import Features from "@/components/features";
 import Hero from "@/components/hero";
+import Testimonials from "@/components/testimonials";
 import Try from "@/components/try";
 import { constructMetadata } from "@/lib/utils";
 import { Metadata } from "next/types";
@@ -13,6 +14,9 @@ export default function Home() {
     <>
       <Hero />
       <Features />
+
+      <Testimonials />
+
       <Try />
     </>
   );
